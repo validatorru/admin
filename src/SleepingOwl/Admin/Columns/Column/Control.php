@@ -32,7 +32,7 @@ class Control extends BaseColumn
 	 * @param int $totalCount
 	 * @return string
 	 */
-	public function render($instance, $totalCount)
+	public function render($instance, $totalCount, $content = null)
 	{
 		$buttons = [];
 		if ( ! $this->modelItem->isOrderable())
