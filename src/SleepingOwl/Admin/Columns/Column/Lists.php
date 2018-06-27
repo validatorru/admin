@@ -8,7 +8,7 @@ class Lists extends BaseColumn
 	 * @param int $totalCount
 	 * @return string
 	 */
-	public function render($instance, $totalCount)
+	public function render($instance, $totalCount, $content=NULL)
 	{
 		$list = $this->valueFromInstance($instance, $this->name);
 		$content = [];
