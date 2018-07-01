@@ -14,6 +14,7 @@ class Select extends BaseFormItem
 	 * @var array
 	 */
 	protected $list;
+    protected $value;
 
 	/**
 	 * @var bool
@@ -50,10 +51,15 @@ class Select extends BaseFormItem
 			$this->attributes['data-nullable'] = true;
 		}
 
-		$select = $this->formBuilder->selectGroup($this->name, $this->label, $list, $this->getValueFromForm(), $this->attributes);
+		$select = $this->formBuilder->selectGroup($this->name, $this->label, $list, $this->value, $this->attributes);
 
 		return $select;
 	}
+
+    public function value($value) {
+        $this->value = $value;
+        return $this;
+    }
 
 	/**
 	 * @param array $values
