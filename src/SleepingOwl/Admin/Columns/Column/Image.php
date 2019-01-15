@@ -19,7 +19,7 @@ class Image extends BaseColumn
 	 * @param int $totalCount
 	 * @return string
 	 */
-	public function render($instance, $totalCount)
+	public function render($instance, $totalCount, $content = NULL)
 	{
 		return parent::render($instance, $totalCount, $this->getCellContent($instance));
 	}
